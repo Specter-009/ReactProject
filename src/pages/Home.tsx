@@ -1,4 +1,5 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonMenu, IonMenuButton } from '@ionic/react';
+import Accordion from './Accordion';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 
@@ -11,7 +12,9 @@ function Home() {
             <IonTitle>Menu Content</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent className="ion-padding">This is the menu content.</IonContent>
+        <IonContent className="ion-padding">
+          <Accordion />
+        </IonContent>
       </IonMenu>
       <IonPage id="main-content">
         <IonHeader>
