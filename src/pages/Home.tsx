@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonMenu, IonMenuButton } from '@ionic/react';
 import Accordion from './Accordion';
 import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import './home.css';
 
 function Home() {
   return (

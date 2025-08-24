@@ -1,9 +1,15 @@
 import React from 'react';
-import { IonAccordion, IonAccordionGroup, IonItem, IonLabel } from '@ionic/react';
-
-import './main.css';
+import { IonAccordion, IonAccordionGroup, IonItem, IonLabel, IonButton } from '@ionic/react';
+import { useHistory } from 'react-router-dom';
+import './accordion.css';
+import GithubFinder from './GithubFinder';
 
 function Accordion() {
+    const history = useHistory();
+
+    const GithubFinder = () => {
+    history.push('/github-finder'); // 👈 route to your GitHubFinder page
+  };
   return (
     <IonAccordionGroup>
       <IonAccordion value="first">
@@ -11,7 +17,9 @@ function Accordion() {
           <IonLabel>First Accordion</IonLabel>
         </IonItem>
         <div className="ion-padding" slot="content">
-          First Content
+            <IonButton expand="block" onClick={GithubFinder}>
+            GitHubFinder
+          </IonButton>
         </div>
       </IonAccordion>
       <IonAccordion value="second">
